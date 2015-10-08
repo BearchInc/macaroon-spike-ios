@@ -7,114 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		96A9486B1BC6D8E30022D22E = {
-			isa = PBXBuildFile;
-			fileRef = 96A9486A1BC6D8E30022D22E;
-		};
-		96A9486D1BC6D8E30022D22E = {
-			isa = PBXBuildFile;
-			fileRef = 96A9486C1BC6D8E30022D22E;
-		};
-		96A948701BC6D8E30022D22E = {
-			isa = PBXBuildFile;
-			fileRef = 96A9486E1BC6D8E30022D22E;
-		};
-		96A948721BC6D8E30022D22E = {
-			isa = PBXBuildFile;
-			fileRef = 96A948711BC6D8E30022D22E;
-		};
-		96A948751BC6D8E30022D22E = {
-			isa = PBXBuildFile;
-			fileRef = 96A948731BC6D8E30022D22E;
-		};
-		E61914744295093C90A51A9D = {
-			isa = PBXBuildFile;
-			fileRef = A1DA9142CCEA2106CCDDA7CB;
-			settings = {
-				ATTRIBUTES = (
-					Weak,
-				);
-			};
-		};
+		263D83201EC57491B2386303 /* Pods_Macaroon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDD9E9F2D1995F47F556657F /* Pods_Macaroon.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		96A9486B1BC6D8E30022D22E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A9486A1BC6D8E30022D22E /* AppDelegate.swift */; };
+		96A9486D1BC6D8E30022D22E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A9486C1BC6D8E30022D22E /* ViewController.swift */; };
+		96A948701BC6D8E30022D22E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96A9486E1BC6D8E30022D22E /* Main.storyboard */; };
+		96A948721BC6D8E30022D22E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96A948711BC6D8E30022D22E /* Assets.xcassets */; };
+		96A948751BC6D8E30022D22E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96A948731BC6D8E30022D22E /* LaunchScreen.storyboard */; };
+		96A948811BC6DE990022D22E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 96A948801BC6DE990022D22E /* GoogleService-Info.plist */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4F2D172D10622DCD788EE384 = {
-			isa = PBXFileReference;
-			includeInIndex = 1;
-			lastKnownFileType = text.xcconfig;
-			name = "Pods-Macaroon.debug.xcconfig";
-			path = "Pods/Target Support Files/Pods-Macaroon/Pods-Macaroon.debug.xcconfig";
-			sourceTree = "<group>";
-		};
-		96A948671BC6D8E30022D22E = {
-			isa = PBXFileReference;
-			explicitFileType = wrapper.application;
-			includeInIndex = 0;
-			path = Macaroon.app;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		96A9486A1BC6D8E30022D22E = {
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.swift;
-			path = AppDelegate.swift;
-			sourceTree = "<group>";
-		};
-		96A9486C1BC6D8E30022D22E = {
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.swift;
-			path = ViewController.swift;
-			sourceTree = "<group>";
-		};
-		96A9486F1BC6D8E30022D22E = {
-			isa = PBXFileReference;
-			lastKnownFileType = file.storyboard;
-			name = Base;
-			path = Base.lproj/Main.storyboard;
-			sourceTree = "<group>";
-		};
-		96A948711BC6D8E30022D22E = {
-			isa = PBXFileReference;
-			lastKnownFileType = folder.assetcatalog;
-			path = Assets.xcassets;
-			sourceTree = "<group>";
-		};
-		96A948741BC6D8E30022D22E = {
-			isa = PBXFileReference;
-			lastKnownFileType = file.storyboard;
-			name = Base;
-			path = Base.lproj/LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		96A948761BC6D8E30022D22E = {
-			isa = PBXFileReference;
-			lastKnownFileType = text.plist.xml;
-			path = Info.plist;
-			sourceTree = "<group>";
-		};
-		A1DA9142CCEA2106CCDDA7CB = {
-			isa = PBXFileReference;
-			explicitFileType = wrapper.framework;
-			includeInIndex = 0;
-			path = Pods_Macaroon.framework;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		B69CB0F34D99C2B85658565D = {
-			isa = PBXFileReference;
-			includeInIndex = 1;
-			lastKnownFileType = text.xcconfig;
-			name = "Pods-Macaroon.release.xcconfig";
-			path = "Pods/Target Support Files/Pods-Macaroon/Pods-Macaroon.release.xcconfig";
-			sourceTree = "<group>";
-		};
+		4F2D172D10622DCD788EE384 /* Pods-Macaroon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Macaroon.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Macaroon/Pods-Macaroon.debug.xcconfig"; sourceTree = "<group>"; };
+		96A948671BC6D8E30022D22E /* Macaroon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Macaroon.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		96A9486A1BC6D8E30022D22E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		96A9486C1BC6D8E30022D22E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		96A9486F1BC6D8E30022D22E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		96A948711BC6D8E30022D22E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		96A948741BC6D8E30022D22E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		96A948761BC6D8E30022D22E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		96A948801BC6DE990022D22E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		96A948831BC6E00F0022D22E /* Macaroon-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Macaroon-Bridging-Header.h"; sourceTree = "<group>"; };
+		B69CB0F34D99C2B85658565D /* Pods-Macaroon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Macaroon.release.xcconfig"; path = "Pods/Target Support Files/Pods-Macaroon/Pods-Macaroon.release.xcconfig"; sourceTree = "<group>"; };
+		DDD9E9F2D1995F47F556657F /* Pods_Macaroon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Macaroon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		96A948641BC6D8E30022D22E = {
+		96A948641BC6D8E30022D22E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E61914744295093C90A51A9D,
+				263D83201EC57491B2386303 /* Pods_Macaroon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,83 +46,81 @@
 		96A9485E1BC6D8E30022D22E = {
 			isa = PBXGroup;
 			children = (
-				D599EEFAD2A5C7FE3B4C0670,
-				96A948691BC6D8E30022D22E,
-				C06656965AFC33995DB7677D,
-				96A948681BC6D8E30022D22E,
+				D599EEFAD2A5C7FE3B4C0670 /* Frameworks */,
+				96A948691BC6D8E30022D22E /* Macaroon */,
+				C06656965AFC33995DB7677D /* Pods */,
+				96A948681BC6D8E30022D22E /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		96A948681BC6D8E30022D22E = {
+		96A948681BC6D8E30022D22E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				96A948671BC6D8E30022D22E,
+				96A948671BC6D8E30022D22E /* Macaroon.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		96A948691BC6D8E30022D22E = {
+		96A948691BC6D8E30022D22E /* Macaroon */ = {
 			isa = PBXGroup;
 			children = (
-				96A9487D1BC6DA150022D22E,
-				96A9487F1BC6DAAF0022D22E,
-				96A9487C1BC6DA090022D22E,
-				96A9487E1BC6DA2E0022D22E,
+				96A9487D1BC6DA150022D22E /* AppDelegate */,
+				96A9487F1BC6DAAF0022D22E /* Assets */,
+				96A9487C1BC6DA090022D22E /* Controller */,
+				96A9487E1BC6DA2E0022D22E /* View */,
+				96A948831BC6E00F0022D22E /* Macaroon-Bridging-Header.h */,
 			);
 			path = Macaroon;
 			sourceTree = "<group>";
 		};
-		96A9487C1BC6DA090022D22E = {
+		96A9487C1BC6DA090022D22E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				96A9486C1BC6D8E30022D22E,
+				96A9486C1BC6D8E30022D22E /* ViewController.swift */,
 			);
-			name = Controller;
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		96A9487D1BC6DA150022D22E = {
+		96A9487D1BC6DA150022D22E /* AppDelegate */ = {
 			isa = PBXGroup;
 			children = (
-				96A9486A1BC6D8E30022D22E,
+				96A9486A1BC6D8E30022D22E /* AppDelegate.swift */,
 			);
-			name = AppDelegate;
 			path = AppDelegate;
 			sourceTree = "<group>";
 		};
-		96A9487E1BC6DA2E0022D22E = {
+		96A9487E1BC6DA2E0022D22E /* View */ = {
 			isa = PBXGroup;
 			children = (
-				96A948731BC6D8E30022D22E,
-				96A9486E1BC6D8E30022D22E,
+				96A948731BC6D8E30022D22E /* LaunchScreen.storyboard */,
+				96A9486E1BC6D8E30022D22E /* Main.storyboard */,
 			);
-			name = View;
 			path = View;
 			sourceTree = "<group>";
 		};
-		96A9487F1BC6DAAF0022D22E = {
+		96A9487F1BC6DAAF0022D22E /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				96A948711BC6D8E30022D22E,
-				96A948761BC6D8E30022D22E,
+				96A948711BC6D8E30022D22E /* Assets.xcassets */,
+				96A948801BC6DE990022D22E /* GoogleService-Info.plist */,
+				96A948761BC6D8E30022D22E /* Info.plist */,
 			);
-			name = Assets;
 			path = Assets;
 			sourceTree = "<group>";
 		};
-		C06656965AFC33995DB7677D = {
+		C06656965AFC33995DB7677D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				4F2D172D10622DCD788EE384,
-				B69CB0F34D99C2B85658565D,
+				4F2D172D10622DCD788EE384 /* Pods-Macaroon.debug.xcconfig */,
+				B69CB0F34D99C2B85658565D /* Pods-Macaroon.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		D599EEFAD2A5C7FE3B4C0670 = {
+		D599EEFAD2A5C7FE3B4C0670 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A1DA9142CCEA2106CCDDA7CB,
+				DDD9E9F2D1995F47F556657F /* Pods_Macaroon.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -208,16 +128,16 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		96A948661BC6D8E30022D22E = {
+		96A948661BC6D8E30022D22E /* Macaroon */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 96A948791BC6D8E30022D22E;
+			buildConfigurationList = 96A948791BC6D8E30022D22E /* Build configuration list for PBXNativeTarget "Macaroon" */;
 			buildPhases = (
-				27F5FCD30706EBAC1FB8906F,
-				96A948631BC6D8E30022D22E,
-				96A948641BC6D8E30022D22E,
-				96A948651BC6D8E30022D22E,
-				B6E817ECF5BC448DFAB92E06,
-				48327533F774AD27E6A12250,
+				27F5FCD30706EBAC1FB8906F /* Check Pods Manifest.lock */,
+				96A948631BC6D8E30022D22E /* Sources */,
+				96A948641BC6D8E30022D22E /* Frameworks */,
+				96A948651BC6D8E30022D22E /* Resources */,
+				48327533F774AD27E6A12250 /* Copy Pods Resources */,
+				91306641C9AD0D1C29F93CE9 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -225,24 +145,34 @@
 			);
 			name = Macaroon;
 			productName = Macaroon;
-			productReference = 96A948671BC6D8E30022D22E;
+			productReference = 96A948671BC6D8E30022D22E /* Macaroon.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		96A9485F1BC6D8E30022D22E = {
+		96A9485F1BC6D8E30022D22E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = bearch;
 				TargetAttributes = {
 					96A948661BC6D8E30022D22E = {
 						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = ATB5PVNS89;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
-			buildConfigurationList = 96A948621BC6D8E30022D22E;
+			buildConfigurationList = 96A948621BC6D8E30022D22E /* Build configuration list for PBXProject "Macaroon" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -251,32 +181,31 @@
 				Base,
 			);
 			mainGroup = 96A9485E1BC6D8E30022D22E;
-			productRefGroup = 96A948681BC6D8E30022D22E;
+			productRefGroup = 96A948681BC6D8E30022D22E /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-			);
 			projectRoot = "";
 			targets = (
-				96A948661BC6D8E30022D22E,
+				96A948661BC6D8E30022D22E /* Macaroon */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		96A948651BC6D8E30022D22E = {
+		96A948651BC6D8E30022D22E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96A948751BC6D8E30022D22E,
-				96A948721BC6D8E30022D22E,
-				96A948701BC6D8E30022D22E,
+				96A948751BC6D8E30022D22E /* LaunchScreen.storyboard in Resources */,
+				96A948811BC6DE990022D22E /* GoogleService-Info.plist in Resources */,
+				96A948721BC6D8E30022D22E /* Assets.xcassets in Resources */,
+				96A948701BC6D8E30022D22E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		27F5FCD30706EBAC1FB8906F = {
+		27F5FCD30706EBAC1FB8906F /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -291,7 +220,7 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		48327533F774AD27E6A12250 = {
+		48327533F774AD27E6A12250 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -306,7 +235,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Macaroon/Pods-Macaroon-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B6E817ECF5BC448DFAB92E06 = {
+		91306641C9AD0D1C29F93CE9 /* Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -324,31 +253,31 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		96A948631BC6D8E30022D22E = {
+		96A948631BC6D8E30022D22E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96A9486D1BC6D8E30022D22E,
-				96A9486B1BC6D8E30022D22E,
+				96A9486D1BC6D8E30022D22E /* ViewController.swift in Sources */,
+				96A9486B1BC6D8E30022D22E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		96A9486E1BC6D8E30022D22E = {
+		96A9486E1BC6D8E30022D22E /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				96A9486F1BC6D8E30022D22E,
+				96A9486F1BC6D8E30022D22E /* Base */,
 			);
 			name = Main.storyboard;
 			path = .;
 			sourceTree = "<group>";
 		};
-		96A948731BC6D8E30022D22E = {
+		96A948731BC6D8E30022D22E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				96A948741BC6D8E30022D22E,
+				96A948741BC6D8E30022D22E /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			path = .;
@@ -357,7 +286,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		96A948771BC6D8E30022D22E = {
+		96A948771BC6D8E30022D22E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -401,7 +330,7 @@
 			};
 			name = Debug;
 		};
-		96A948781BC6D8E30022D22E = {
+		96A948781BC6D8E30022D22E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -438,52 +367,67 @@
 			};
 			name = Release;
 		};
-		96A9487A1BC6D8E30022D22E = {
+		96A9487A1BC6D8E30022D22E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4F2D172D10622DCD788EE384;
+			baseConfigurationReference = 4F2D172D10622DCD788EE384 /* Pods-Macaroon.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Macaroon/Assets/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bearch.Macaroon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "8defd531-7310-4551-af5a-cd1233f20d2b";
+				SWIFT_OBJC_BRIDGING_HEADER = "Macaroon/Macaroon-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		96A9487B1BC6D8E30022D22E = {
+		96A9487B1BC6D8E30022D22E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B69CB0F34D99C2B85658565D;
+			baseConfigurationReference = B69CB0F34D99C2B85658565D /* Pods-Macaroon.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Macaroon/Assets/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bearch.Macaroon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "8defd531-7310-4551-af5a-cd1233f20d2b";
+				SWIFT_OBJC_BRIDGING_HEADER = "Macaroon/Macaroon-Bridging-Header.h";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		96A948621BC6D8E30022D22E = {
+		96A948621BC6D8E30022D22E /* Build configuration list for PBXProject "Macaroon" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				96A948771BC6D8E30022D22E,
-				96A948781BC6D8E30022D22E,
+				96A948771BC6D8E30022D22E /* Debug */,
+				96A948781BC6D8E30022D22E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		96A948791BC6D8E30022D22E = {
+		96A948791BC6D8E30022D22E /* Build configuration list for PBXNativeTarget "Macaroon" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				96A9487A1BC6D8E30022D22E,
-				96A9487B1BC6D8E30022D22E,
+				96A9487A1BC6D8E30022D22E /* Debug */,
+				96A9487B1BC6D8E30022D22E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 96A9485F1BC6D8E30022D22E;
+	rootObject = 96A9485F1BC6D8E30022D22E /* Project object */;
 }

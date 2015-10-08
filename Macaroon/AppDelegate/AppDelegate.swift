@@ -1,24 +1,74 @@
-//
-//  AppDelegate.swift
-//  Macaroon
-//
-//  Created by Fernando Heck on 10/8/15.
-//  Copyright © 2015 bearch. All rights reserved.
-//
-
 import UIKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, GGLInstanceIDDelegate {
 
 	var window: UIWindow?
 
 
 	func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-		// Override point for customization after application launch.
+
+		let gcmToken = NSUserDefaults.standardUserDefaults().objectForKey("gcm_token")
+		guard gcmToken != nil else {
+			let settings: UIUserNotificationSettings =
+			UIUserNotificationSettings(forTypes: [.Alert, .Badge, .Sound], categories: nil)
+
+			application.registerUserNotificationSettings(settings)
+			application.registerForRemoteNotifications()
+			return true
+		}
+		
+		print("Hey benchod, i know you forgot to write it down so here goes my token again")
+		print("\(gcmToken!)")
+		
 		return true
 	}
+	
+	func application(application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: NSError) {
+		print("Registration failed with error \(error)")
+	}
+	
+	func application(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData) {
+		
+		let instanceIDConfig = GGLInstanceIDConfig.defaultConfig()
+		instanceIDConfig.delegate = self
+		GGLInstanceID.sharedInstance().startWithConfig(instanceIDConfig)
+		let registrationOptions = [kGGLInstanceIDRegisterAPNSOption:deviceToken, kGGLInstanceIDAPNSServerTypeSandboxOption:true]
 
+		let gglInstance = GGLInstanceID.sharedInstance()
+		gglInstance.tokenWithAuthorizedEntity("752048825109", scope: kGGLInstanceIDScopeGCM, options: registrationOptions) { (token, error) -> Void in
+			
+			guard error == nil else {
+				print("Registration failed with error \(error)")
+				return
+			}
+			
+			print("GCM Registration succeeded with token \(token)")
+			NSUserDefaults.standardUserDefaults().setObject(token, forKey: "gcm_token")
+		}
+		
+		print("Device token - \(deviceToken)")
+	}
+	
+	func onTokenRefresh() {
+		print("Token refresh")
+	}
+
+	func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject], fetchCompletionHandler completionHandler: (UIBackgroundFetchResult) -> Void) {
+		print("didReceiveRemoteNotification with fetch")
+		print("\(userInfo)")
+		completionHandler(.NewData)
+	}
+	
+	func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject]) {
+		print("didReceiveRemoteNotification")
+		print("\(userInfo)")
+	}
+	
+	func application(application: UIApplication, didReceiveLocalNotification notification: UILocalNotification) {
+		print("didReceiveLocalNotification")
+	}
+	
 	func applicationWillResignActive(application: UIApplication) {
 		// Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
 		// Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
