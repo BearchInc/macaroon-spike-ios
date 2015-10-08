@@ -10,7 +10,8 @@
 		263D83201EC57491B2386303 /* Pods_Macaroon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDD9E9F2D1995F47F556657F /* Pods_Macaroon.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		96476F751BC6FA50005E0E4E /* PermissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96476F741BC6FA50005E0E4E /* PermissionViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		96476F771BC6FAF1005E0E4E /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96476F761BC6FAF1005E0E4E /* MainNavigationController.swift */; settings = {ASSET_TAGS = (); }; };
-		96476F7A1BC6FD61005E0E4E /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96476F791BC6FD61005E0E4E /* Storyboards.swift */; settings = {ASSET_TAGS = (); }; };
+		96476F7D1BC70997005E0E4E /* Macaroon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96476F7C1BC70997005E0E4E /* Macaroon.swift */; settings = {ASSET_TAGS = (); }; };
+		96476F7F1BC70BF1005E0E4E /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96476F7E1BC70BF1005E0E4E /* Storyboards.swift */; settings = {ASSET_TAGS = (); }; };
 		96A9486B1BC6D8E30022D22E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A9486A1BC6D8E30022D22E /* AppDelegate.swift */; };
 		96A9486D1BC6D8E30022D22E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A9486C1BC6D8E30022D22E /* ViewController.swift */; };
 		96A948701BC6D8E30022D22E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96A9486E1BC6D8E30022D22E /* Main.storyboard */; };
@@ -23,7 +24,8 @@
 		4F2D172D10622DCD788EE384 /* Pods-Macaroon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Macaroon.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Macaroon/Pods-Macaroon.debug.xcconfig"; sourceTree = "<group>"; };
 		96476F741BC6FA50005E0E4E /* PermissionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PermissionViewController.swift; sourceTree = "<group>"; };
 		96476F761BC6FAF1005E0E4E /* MainNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
-		96476F791BC6FD61005E0E4E /* Storyboards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
+		96476F7C1BC70997005E0E4E /* Macaroon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Macaroon.swift; sourceTree = "<group>"; };
+		96476F7E1BC70BF1005E0E4E /* Storyboards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
 		96A948671BC6D8E30022D22E /* Macaroon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Macaroon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96A9486A1BC6D8E30022D22E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96A9486C1BC6D8E30022D22E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +51,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		96476F7B1BC70966005E0E4E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				96476F7C1BC70997005E0E4E /* Macaroon.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		96A9485E1BC6D8E30022D22E = {
 			isa = PBXGroup;
 			children = (
@@ -71,8 +81,9 @@
 			isa = PBXGroup;
 			children = (
 				96A9487D1BC6DA150022D22E /* AppDelegate */,
-				96A9487F1BC6DAAF0022D22E /* Assets */,
+				96A9487F1BC6DAAF0022D22E /* Asset */,
 				96A9487C1BC6DA090022D22E /* Controller */,
+				96476F7B1BC70966005E0E4E /* Model */,
 				96A9487E1BC6DA2E0022D22E /* View */,
 				96A948831BC6E00F0022D22E /* Macaroon-Bridging-Header.h */,
 			);
@@ -82,9 +93,9 @@
 		96A9487C1BC6DA090022D22E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				96A9486C1BC6D8E30022D22E /* ViewController.swift */,
-				96476F741BC6FA50005E0E4E /* PermissionViewController.swift */,
 				96476F761BC6FAF1005E0E4E /* MainNavigationController.swift */,
+				96476F741BC6FA50005E0E4E /* PermissionViewController.swift */,
+				96A9486C1BC6D8E30022D22E /* ViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -106,15 +117,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		96A9487F1BC6DAAF0022D22E /* Assets */ = {
+		96A9487F1BC6DAAF0022D22E /* Asset */ = {
 			isa = PBXGroup;
 			children = (
-				96476F791BC6FD61005E0E4E /* Storyboards.swift */,
 				96A948711BC6D8E30022D22E /* Assets.xcassets */,
 				96A948801BC6DE990022D22E /* GoogleService-Info.plist */,
 				96A948761BC6D8E30022D22E /* Info.plist */,
+				96476F7E1BC70BF1005E0E4E /* Storyboards.swift */,
 			);
-			path = Assets;
+			path = Asset;
 			sourceTree = "<group>";
 		};
 		C06656965AFC33995DB7677D /* Pods */ = {
@@ -272,7 +283,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "echo \"Natalie Generator: Determining if generated Swift file is up-to-date.\"\n\nNATALIE_PATH=\"/usr/local/bin/natalie.swift\"\n\nif [ -f $NATALIE_PATH ]; then\nBASE_PATH=\"$PROJECT_DIR/$PROJECT_NAME\"\nOUTPUT_PATH=\"$BASE_PATH/Assets/Storyboards.swift\"\n\nif [ ! -e \"$OUTPUT_PATH\" ] || [ -n \"$(find \"$BASE_PATH\" -type f -name \"*.storyboard\" -newer \"$OUTPUT_PATH\" -print -quit)\" ]; then\necho \"Natalie Generator: Generated Swift is out-of-date; re-generating...\"\n\n/usr/bin/chflags nouchg \"$OUTPUT_PATH\"\n\"$NATALIE_PATH\" \"$BASE_PATH\" > \"$OUTPUT_PATH\"\n/usr/bin/chflags uchg \"$OUTPUT_PATH\"\n\necho \"Natalie Generator: Done.\"\nelse\necho \"Natalie Generator: Generated Swift is up-to-date; skipping re-generation.\"\nfi\nfi\n";
+			shellScript = "echo \"Natalie Generator: Determining if generated Swift file is up-to-date.\"\n\nNATALIE_PATH=\"/usr/local/bin/natalie.swift\"\n\nif [ -f $NATALIE_PATH ]; then\nBASE_PATH=\"$PROJECT_DIR/$PROJECT_NAME\"\nOUTPUT_PATH=\"$BASE_PATH/Asset/Storyboards.swift\"\n\nif [ ! -e \"$OUTPUT_PATH\" ] || [ -n \"$(find \"$BASE_PATH\" -type f -name \"*.storyboard\" -newer \"$OUTPUT_PATH\" -print -quit)\" ]; then\necho \"Natalie Generator: Generated Swift is out-of-date; re-generating...\"\n\n/usr/bin/chflags nouchg \"$OUTPUT_PATH\"\n\"$NATALIE_PATH\" \"$BASE_PATH\" > \"$OUTPUT_PATH\"\n/usr/bin/chflags uchg \"$OUTPUT_PATH\"\n\necho \"Natalie Generator: Done.\"\nelse\necho \"Natalie Generator: Generated Swift is up-to-date; skipping re-generation.\"\nfi\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -281,8 +292,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96476F7F1BC70BF1005E0E4E /* Storyboards.swift in Sources */,
 				96A9486D1BC6D8E30022D22E /* ViewController.swift in Sources */,
-				96476F7A1BC6FD61005E0E4E /* Storyboards.swift in Sources */,
+				96476F7D1BC70997005E0E4E /* Macaroon.swift in Sources */,
 				96476F751BC6FA50005E0E4E /* PermissionViewController.swift in Sources */,
 				96476F771BC6FAF1005E0E4E /* MainNavigationController.swift in Sources */,
 				96A9486B1BC6D8E30022D22E /* AppDelegate.swift in Sources */,
@@ -403,7 +415,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
-				INFOPLIST_FILE = Macaroon/Assets/Info.plist;
+				INFOPLIST_FILE = Macaroon/Asset/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bearch.Macaroon;
@@ -423,7 +435,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
-				INFOPLIST_FILE = Macaroon/Assets/Info.plist;
+				INFOPLIST_FILE = Macaroon/Asset/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bearch.Macaroon;
