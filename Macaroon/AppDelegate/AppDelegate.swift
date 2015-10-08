@@ -57,7 +57,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GGLInstanceIDDelegate {
 	func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject], fetchCompletionHandler completionHandler: (UIBackgroundFetchResult) -> Void) {
 		print("didReceiveRemoteNotification with fetch")
 		print("\(userInfo)")
-		completionHandler(.NewData)
+		
+		print("App state = \(application.applicationState)")
+		
+		switch (application.applicationState) {
+		case .Active:
+			print("App received notification while active")
+			NSNotificationCenter.defaultCenter().postNotificationName("PERMISSION_REQUEST_NOTIFICATION", object: userInfo)
+			break
+		case .Inactive:
+			print("App received notification while inactive")
+			NSNotificationCenter.defaultCenter().postNotificationName("PERMISSION_REQUEST_NOTIFICATION", object: userInfo)
+			break
+		case .Background:
+			print("App received notification while in background - will be ignored")
+			break
+		}
+		
+		
+//		NSNotificationCenter.postNotificationName("Heckmaster", object: ["LALALAL": "asdasdadsa"])
+
+		completionHandler(.NoData)
 	}
 	
 	func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject]) {

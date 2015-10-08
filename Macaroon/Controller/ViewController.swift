@@ -1,11 +1,3 @@
-//
-//  ViewController.swift
-//  Macaroon
-//
-//  Created by Fernando Heck on 10/8/15.
-//  Copyright © 2015 bearch. All rights reserved.
-//
-
 import UIKit
 
 class ViewController: UIViewController {

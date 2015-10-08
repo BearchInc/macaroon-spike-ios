@@ -46,12 +46,64 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1171" y="1034"/>
+            <point key="canvasLocation" x="1279" y="246"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Permission View Controller-->
+        <scene sceneID="yEf-ZW-dnd">
+            <objects>
+                <viewController id="JvV-nO-5MK" customClass="PermissionViewController" customModule="Macaroon" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gKr-sg-XvR"/>
+                        <viewControllerLayoutGuide type="bottom" id="m8T-4O-MpA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dpj-89-mTl">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@Diego Borges" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UXE-c3-E84" userLabel="Title Label">
+                                <rect key="frame" x="241" y="60" width="118.5" height="20.5"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LALALALLALALA" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iY3-qE-1G6">
+                                <rect key="frame" x="10" y="154.5" width="580" height="20.5"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="m8T-4O-MpA" firstAttribute="top" secondItem="UXE-c3-E84" secondAttribute="bottom" constant="525" id="0TE-yg-kyT"/>
+                            <constraint firstItem="iY3-qE-1G6" firstAttribute="top" secondItem="UXE-c3-E84" secondAttribute="bottom" constant="74" id="39E-rm-QHg"/>
+                            <constraint firstItem="UXE-c3-E84" firstAttribute="centerX" secondItem="dpj-89-mTl" secondAttribute="centerX" id="7ZW-pN-554"/>
+                            <constraint firstItem="UXE-c3-E84" firstAttribute="top" secondItem="gKr-sg-XvR" secondAttribute="bottom" constant="40" id="7hd-dO-3cP"/>
+                            <constraint firstAttribute="trailing" secondItem="iY3-qE-1G6" secondAttribute="trailing" constant="10" id="8pA-KN-egZ"/>
+                            <constraint firstItem="iY3-qE-1G6" firstAttribute="leading" secondItem="dpj-89-mTl" secondAttribute="leading" constant="10" id="G8N-6c-VGM"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="0TE-yg-kyT"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="messageLabel" destination="iY3-qE-1G6" id="lPi-36-BMx"/>
+                        <outlet property="titleLabel" destination="UXE-c3-E84" id="ygv-zh-9oo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ld4-th-R1P" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1284" y="1069"/>
+        </scene>
+        <!--Main Navigation Controller-->
         <scene sceneID="EJT-EO-cIO">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bDl-3m-jlq" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bDl-3m-jlq" customClass="MainNavigationController" customModule="Macaroon" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="SGO-Ec-ZW2">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -61,11 +113,12 @@
                     <nil name="viewControllers"/>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ctm-dG-n23"/>
+                        <segue destination="JvV-nO-5MK" kind="presentation" identifier="PermissionViewControllerSegue" id="qfa-qj-e4u"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eeK-1X-99y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="144" y="1034"/>
+            <point key="canvasLocation" x="252" y="246"/>
         </scene>
     </scenes>
 </document>
