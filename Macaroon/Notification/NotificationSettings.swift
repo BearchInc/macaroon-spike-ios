@@ -4,6 +4,10 @@ class NotificationSettings: NSObject, GGLInstanceIDDelegate {
 
 	static var instance = NotificationSettings()
 	
+	let firstActionId = "ACTION1"
+	let secondActionId = "ACTION2"
+	let categoryId = "CATEGORY"
+	
 	func setupNotification(application: UIApplication) -> Bool {
 		
 		let gcmToken = NSUserDefaults.standardUserDefaults().stringForKey("gcm_token")
@@ -52,14 +56,21 @@ class NotificationSettings: NSObject, GGLInstanceIDDelegate {
 		
 		let firstAction = UIMutableUserNotificationAction()
 		firstAction.activationMode = .Background
-		firstAction.title = "Action 1"
-		firstAction.identifier = ""
+		firstAction.title = "Authorize"
+		firstAction.identifier = firstActionId
 		firstAction.destructive = false
 		firstAction.authenticationRequired = true
 		
+		let secondAction = UIMutableUserNotificationAction()
+		secondAction.activationMode = .Background
+		secondAction.title = "Decline"
+		secondAction.identifier = secondActionId
+		secondAction.destructive = false
+		secondAction.authenticationRequired = true
+		
 		let actionCategory = UIMutableUserNotificationCategory()
-		actionCategory.identifier = ""
-		actionCategory.setActions([firstAction], forContext: .Default)
+		actionCategory.identifier = categoryId
+		actionCategory.setActions([firstAction, secondAction], forContext: .Default)
 		
 		let categories = Set(arrayLiteral: actionCategory)
 		let types: UIUserNotificationType = [.Alert, .Badge, .Sound]
