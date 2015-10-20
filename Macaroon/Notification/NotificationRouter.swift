@@ -27,16 +27,16 @@ class NotificationRouter {
 	}
 	
 	static func handleNotification(application: UIApplication, userInfo: [NSObject : AnyObject], identifier: String, completionHandler: () -> Void) {
+		
+		switch identifier {
+		case NotificationSettings.FIRST_ACTION_ID:
+			print("Authorize was selected")
+		case NotificationSettings.SECOND_ACTION_ID:
+			print("Decline was selected")
+		default:
+			print("Where da fuck did you click???")
+		}
+		
+		completionHandler()
 	}
 }
-
-
-//curl -XPOST https://gcm-http.googleapis.com/gcm/send -H "Content-Type:application/json" -H "Authorization:key=AIzaSyD4jrcwQEsQrbHdhbkn22NWPH2tAByr-Jo" -d '{
-//"to" : "n1pthLorFvA:APA91bGJJZFAMN_O_eZsTYJGmy0koaAUtO6cRlWDbFiCxzfGhH3E4-134GobUWEoYEAjfIZl2pjQ75j_Xq2IctttyjfpeM3FUfbjPapzslrbDAjfOTWndRfGbcmnqDNxBbhx1GSuhGeO",
-//"content_available" : true,
-//"notification" : {
-//	"title": "@Diego Borges",
-//	"body": "Hey bro, i need your permission to mess around with the database héhé!",
-//	"click_action": "CATEGORY",
-//}
-//}'
