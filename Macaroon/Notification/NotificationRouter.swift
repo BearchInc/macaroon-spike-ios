@@ -29,9 +29,9 @@ class NotificationRouter {
 	static func handleNotification(application: UIApplication, userInfo: [NSObject : AnyObject], identifier: String, completionHandler: () -> Void) {
 		
 		switch identifier {
-		case NotificationSettings.FIRST_ACTION_ID:
+		case NotificationSettings.ACCEPT_ACTION_ID:
 			print("Authorize was selected")
-		case NotificationSettings.SECOND_ACTION_ID:
+		case NotificationSettings.DECLINE_ACTION_ID:
 			print("Decline was selected")
 		default:
 			print("Where da fuck did you click???")

@@ -4,9 +4,9 @@ class NotificationSettings: NSObject, GGLInstanceIDDelegate {
 
 	static var instance = NotificationSettings()
 	
-	static let FIRST_ACTION_ID = "ACTION1"
-	static let SECOND_ACTION_ID = "ACTION2"
-	static let CATEGORY_ID = "CATEGORY"
+	static let ACCEPT_ACTION_ID = "LOGIN_REQUEST_ACCEPT"
+	static let DECLINE_ACTION_ID = "LOGIN_REQUEST_DECLINE"
+	static let CATEGORY_ID = "LOGIN_REQUEST"
 	
 	func setupNotification(application: UIApplication) -> Bool {
 		
@@ -52,14 +52,14 @@ class NotificationSettings: NSObject, GGLInstanceIDDelegate {
 		let firstAction = UIMutableUserNotificationAction()
 		firstAction.activationMode = .Background
 		firstAction.title = "Authorize"
-		firstAction.identifier = NotificationSettings.FIRST_ACTION_ID
+		firstAction.identifier = NotificationSettings.ACCEPT_ACTION_ID
 		firstAction.destructive = false
 		firstAction.authenticationRequired = true
 		
 		let secondAction = UIMutableUserNotificationAction()
 		secondAction.activationMode = .Background
 		secondAction.title = "Decline"
-		secondAction.identifier = NotificationSettings.SECOND_ACTION_ID
+		secondAction.identifier = NotificationSettings.DECLINE_ACTION_ID
 		secondAction.destructive = false
 		secondAction.authenticationRequired = false
 		
