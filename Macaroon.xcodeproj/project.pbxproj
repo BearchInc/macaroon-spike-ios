@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		263D83201EC57491B2386303 /* Pods_Macaroon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDD9E9F2D1995F47F556657F /* Pods_Macaroon.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		263D83201EC57491B2386303 /* Pods_Macaroon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDD9E9F2D1995F47F556657F /* Pods_Macaroon.framework */; };
 		9613DBB11BD56847006A2132 /* NotificationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9613DBB01BD56847006A2132 /* NotificationRouter.swift */; settings = {ASSET_TAGS = (); }; };
 		9613DBB31BD56A6A006A2132 /* NotificationSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9613DBB21BD56A6A006A2132 /* NotificationSettings.swift */; settings = {ASSET_TAGS = (); }; };
 		96476F751BC6FA50005E0E4E /* PermissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96476F741BC6FA50005E0E4E /* PermissionViewController.swift */; settings = {ASSET_TAGS = (); }; };
@@ -195,12 +195,12 @@
 		96A948691BC6D8E30022D22E /* Macaroon */ = {
 			isa = PBXGroup;
 			children = (
-				9613DBAF1BD56836006A2132 /* Notification */,
 				96A9487D1BC6DA150022D22E /* AppDelegate */,
 				96A9487F1BC6DAAF0022D22E /* Asset */,
 				96A9487C1BC6DA090022D22E /* Controller */,
-				96A9487E1BC6DA2E0022D22E /* View */,
 				96A948831BC6E00F0022D22E /* Macaroon-Bridging-Header.h */,
+				9613DBAF1BD56836006A2132 /* Notification */,
+				96A9487E1BC6DA2E0022D22E /* View */,
 			);
 			path = Macaroon;
 			sourceTree = "<group>";

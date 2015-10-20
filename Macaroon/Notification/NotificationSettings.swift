@@ -66,7 +66,7 @@ class NotificationSettings: NSObject, GGLInstanceIDDelegate {
 		secondAction.title = "Decline"
 		secondAction.identifier = NotificationSettings.SECOND_ACTION_ID
 		secondAction.destructive = false
-		secondAction.authenticationRequired = true
+		secondAction.authenticationRequired = false
 		
 		let actionCategory = UIMutableUserNotificationCategory()
 		actionCategory.identifier = NotificationSettings.CATEGORY_ID
