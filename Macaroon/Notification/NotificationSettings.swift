@@ -11,17 +11,15 @@ class NotificationSettings: NSObject, GGLInstanceIDDelegate {
 	func setupNotification(application: UIApplication) -> Bool {
 		
 		let gcmToken = NSUserDefaults.standardUserDefaults().stringForKey("gcm_token")
-		guard gcmToken != nil else {
-			let settings: UIUserNotificationSettings =
-			UIUserNotificationSettings(forTypes: [.Alert, .Badge, .Sound], categories: nil)
-			
-			application.registerUserNotificationSettings(settings)
+		if gcmToken == nil {
+			application.registerUserNotificationSettings(getSettings())
 			application.registerForRemoteNotifications()
 			return true
 		}
 		
-		let settings = getSettings(gcmToken!)
-		UIApplication.sharedApplication().registerUserNotificationSettings(settings)
+		print("Hey benchod, i know you forgot to write it down so here goes my token again")
+		print("\(gcmToken!)")
+		
 		return true
 	}
 	
@@ -50,10 +48,7 @@ class NotificationSettings: NSObject, GGLInstanceIDDelegate {
 		
 	}
 	
-	private func getSettings(gcmToken: String) -> UIUserNotificationSettings {
-		print("Hey benchod, i know you forgot to write it down so here goes my token again")
-		print("\(gcmToken)")
-		
+	private func getSettings() -> UIUserNotificationSettings {
 		let firstAction = UIMutableUserNotificationAction()
 		firstAction.activationMode = .Background
 		firstAction.title = "Authorize"
