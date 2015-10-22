@@ -19,6 +19,7 @@
 		96A948721BC6D8E30022D22E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96A948711BC6D8E30022D22E /* Assets.xcassets */; };
 		96A948751BC6D8E30022D22E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96A948731BC6D8E30022D22E /* LaunchScreen.storyboard */; };
 		96A948811BC6DE990022D22E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 96A948801BC6DE990022D22E /* GoogleService-Info.plist */; settings = {ASSET_TAGS = (); }; };
+		96EEBA321BD95781003DF30C /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EEBA311BD95781003DF30C /* Notification.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		96A948761BC6D8E30022D22E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		96A948801BC6DE990022D22E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		96A948831BC6E00F0022D22E /* Macaroon-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Macaroon-Bridging-Header.h"; sourceTree = "<group>"; };
+		96EEBA311BD95781003DF30C /* Notification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		B69CB0F34D99C2B85658565D /* Pods-Macaroon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Macaroon.release.xcconfig"; path = "Pods/Target Support Files/Pods-Macaroon/Pods-Macaroon.release.xcconfig"; sourceTree = "<group>"; };
 		DDD9E9F2D1995F47F556657F /* Pods_Macaroon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Macaroon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -58,6 +60,7 @@
 			children = (
 				9613DBB01BD56847006A2132 /* NotificationRouter.swift */,
 				9613DBB21BD56A6A006A2132 /* NotificationSettings.swift */,
+				96EEBA311BD95781003DF30C /* Notification.swift */,
 			);
 			path = Notification;
 			sourceTree = "<group>";
@@ -299,6 +302,7 @@
 				96A9486D1BC6D8E30022D22E /* ViewController.swift in Sources */,
 				9613DBB31BD56A6A006A2132 /* NotificationSettings.swift in Sources */,
 				96476F751BC6FA50005E0E4E /* PermissionViewController.swift in Sources */,
+				96EEBA321BD95781003DF30C /* Notification.swift in Sources */,
 				9613DBB11BD56847006A2132 /* NotificationRouter.swift in Sources */,
 				96476F771BC6FAF1005E0E4E /* MainNavigationController.swift in Sources */,
 				96A9486B1BC6D8E30022D22E /* AppDelegate.swift in Sources */,
