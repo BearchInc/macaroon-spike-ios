@@ -43,7 +43,7 @@ class NotificationRouter {
 			print("Where da fuck did you click???")
 		}
 		
-		request = Alamofire.request(.POST, url)
+		request = Alamofire.request(.GET, url)
 			.responseJSON { response in
 				print("omg")
 				debugPrint(response)
