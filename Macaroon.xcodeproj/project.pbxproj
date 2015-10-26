@@ -19,6 +19,7 @@
 		96A948721BC6D8E30022D22E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96A948711BC6D8E30022D22E /* Assets.xcassets */; };
 		96A948751BC6D8E30022D22E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96A948731BC6D8E30022D22E /* LaunchScreen.storyboard */; };
 		96A948811BC6DE990022D22E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 96A948801BC6DE990022D22E /* GoogleService-Info.plist */; settings = {ASSET_TAGS = (); }; };
+		96EEBA321BD95781003DF30C /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EEBA311BD95781003DF30C /* Notification.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,58 +29,6 @@
 		96476F741BC6FA50005E0E4E /* PermissionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PermissionViewController.swift; sourceTree = "<group>"; };
 		96476F761BC6FAF1005E0E4E /* MainNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
 		96476F7E1BC70BF1005E0E4E /* Storyboards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
-		966533351BC83A8300D6305C /* core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = core.h; sourceTree = "<group>"; };
-		966533361BC83A8300D6305C /* crypto_aead_chacha20poly1305.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = crypto_aead_chacha20poly1305.h; sourceTree = "<group>"; };
-		966533371BC83A8300D6305C /* crypto_auth.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = crypto_auth.h; sourceTree = "<group>"; };
-		966533381BC83A8300D6305C /* crypto_auth_hmacsha256.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = crypto_auth_hmacsha256.h; sourceTree = "<group>"; };
-		966533391BC83A8300D6305C /* crypto_auth_hmacsha512.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = crypto_auth_hmacsha512.h; sourceTree = "<group>"; };
-		9665333A1BC83A8300D6305C /* crypto_auth_hmacsha512256.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = crypto_auth_hmacsha512256.h; sourceTree = "<group>"; };
-		9665333B1BC83A8300D6305C /* crypto_box.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = crypto_box.h; sourceTree = "<group>"; };
-		9665333C1BC83A8300D6305C /* crypto_box_curve25519xsalsa20poly1305.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = crypto_box_curve25519xsalsa20poly1305.h; sourceTree = "<group>"; };
-		9665333D1BC83A8300D6305C /* crypto_core_hsalsa20.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = crypto_core_hsalsa20.h; sourceTree = "<group>"; };
-		9665333E1BC83A8300D6305C /* crypto_core_salsa20.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = crypto_core_salsa20.h; sourceTree = "<group>"; };
-		9665333F1BC83A8300D6305C /* crypto_core_salsa2012.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = crypto_core_salsa2012.h; sourceTree = "<group>"; };
-		966533401BC83A8300D6305C /* crypto_core_salsa208.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = crypto_core_salsa208.h; sourceTree = "<group>"; };
-		966533411BC83A8300D6305C /* crypto_generichash.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = crypto_generichash.h; sourceTree = "<group>"; };
-		966533421BC83A8300D6305C /* crypto_generichash_blake2b.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = crypto_generichash_blake2b.h; sourceTree = "<group>"; };
-		966533431BC83A8300D6305C /* crypto_hash.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = crypto_hash.h; sourceTree = "<group>"; };
-		966533441BC83A8300D6305C /* crypto_hash_sha256.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = crypto_hash_sha256.h; sourceTree = "<group>"; };
-		966533451BC83A8300D6305C /* crypto_hash_sha512.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = crypto_hash_sha512.h; sourceTree = "<group>"; };
-		966533461BC83A8300D6305C /* crypto_int32.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = crypto_int32.h; sourceTree = "<group>"; };
-		966533471BC83A8300D6305C /* crypto_int64.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = crypto_int64.h; sourceTree = "<group>"; };
-		966533481BC83A8300D6305C /* crypto_onetimeauth.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = crypto_onetimeauth.h; sourceTree = "<group>"; };
-		966533491BC83A8300D6305C /* crypto_onetimeauth_poly1305.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = crypto_onetimeauth_poly1305.h; sourceTree = "<group>"; };
-		9665334A1BC83A8300D6305C /* crypto_pwhash_scryptsalsa208sha256.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = crypto_pwhash_scryptsalsa208sha256.h; sourceTree = "<group>"; };
-		9665334B1BC83A8300D6305C /* crypto_scalarmult.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = crypto_scalarmult.h; sourceTree = "<group>"; };
-		9665334C1BC83A8300D6305C /* crypto_scalarmult_curve25519.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = crypto_scalarmult_curve25519.h; sourceTree = "<group>"; };
-		9665334D1BC83A8300D6305C /* crypto_secretbox.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = crypto_secretbox.h; sourceTree = "<group>"; };
-		9665334E1BC83A8300D6305C /* crypto_secretbox_xsalsa20poly1305.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = crypto_secretbox_xsalsa20poly1305.h; sourceTree = "<group>"; };
-		9665334F1BC83A8300D6305C /* crypto_shorthash.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = crypto_shorthash.h; sourceTree = "<group>"; };
-		966533501BC83A8300D6305C /* crypto_shorthash_siphash24.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = crypto_shorthash_siphash24.h; sourceTree = "<group>"; };
-		966533511BC83A8300D6305C /* crypto_sign.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = crypto_sign.h; sourceTree = "<group>"; };
-		966533521BC83A8300D6305C /* crypto_sign_ed25519.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = crypto_sign_ed25519.h; sourceTree = "<group>"; };
-		966533531BC83A8300D6305C /* crypto_sign_edwards25519sha512batch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = crypto_sign_edwards25519sha512batch.h; sourceTree = "<group>"; };
-		966533541BC83A8300D6305C /* crypto_stream.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = crypto_stream.h; sourceTree = "<group>"; };
-		966533551BC83A8300D6305C /* crypto_stream_aes128ctr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = crypto_stream_aes128ctr.h; sourceTree = "<group>"; };
-		966533561BC83A8300D6305C /* crypto_stream_chacha20.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = crypto_stream_chacha20.h; sourceTree = "<group>"; };
-		966533571BC83A8300D6305C /* crypto_stream_salsa20.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = crypto_stream_salsa20.h; sourceTree = "<group>"; };
-		966533581BC83A8300D6305C /* crypto_stream_salsa2012.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = crypto_stream_salsa2012.h; sourceTree = "<group>"; };
-		966533591BC83A8300D6305C /* crypto_stream_salsa208.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = crypto_stream_salsa208.h; sourceTree = "<group>"; };
-		9665335A1BC83A8300D6305C /* crypto_stream_xsalsa20.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = crypto_stream_xsalsa20.h; sourceTree = "<group>"; };
-		9665335B1BC83A8300D6305C /* crypto_uint16.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = crypto_uint16.h; sourceTree = "<group>"; };
-		9665335C1BC83A8300D6305C /* crypto_uint32.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = crypto_uint32.h; sourceTree = "<group>"; };
-		9665335D1BC83A8300D6305C /* crypto_uint64.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = crypto_uint64.h; sourceTree = "<group>"; };
-		9665335E1BC83A8300D6305C /* crypto_uint8.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = crypto_uint8.h; sourceTree = "<group>"; };
-		9665335F1BC83A8300D6305C /* crypto_verify_16.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = crypto_verify_16.h; sourceTree = "<group>"; };
-		966533601BC83A8300D6305C /* crypto_verify_32.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = crypto_verify_32.h; sourceTree = "<group>"; };
-		966533611BC83A8300D6305C /* crypto_verify_64.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = crypto_verify_64.h; sourceTree = "<group>"; };
-		966533621BC83A8300D6305C /* export.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = export.h; sourceTree = "<group>"; };
-		966533631BC83A8300D6305C /* randombytes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = randombytes.h; sourceTree = "<group>"; };
-		966533641BC83A8300D6305C /* randombytes_salsa20_random.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = randombytes_salsa20_random.h; sourceTree = "<group>"; };
-		966533651BC83A8300D6305C /* randombytes_sysrandom.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = randombytes_sysrandom.h; sourceTree = "<group>"; };
-		966533661BC83A8300D6305C /* runtime.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = runtime.h; sourceTree = "<group>"; };
-		966533671BC83A8300D6305C /* utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = utils.h; sourceTree = "<group>"; };
-		966533681BC83A8300D6305C /* version.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = version.h; sourceTree = "<group>"; };
 		96A948671BC6D8E30022D22E /* Macaroon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Macaroon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96A9486A1BC6D8E30022D22E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96A9486C1BC6D8E30022D22E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -89,6 +38,7 @@
 		96A948761BC6D8E30022D22E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		96A948801BC6DE990022D22E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		96A948831BC6E00F0022D22E /* Macaroon-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Macaroon-Bridging-Header.h"; sourceTree = "<group>"; };
+		96EEBA311BD95781003DF30C /* Notification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		B69CB0F34D99C2B85658565D /* Pods-Macaroon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Macaroon.release.xcconfig"; path = "Pods/Target Support Files/Pods-Macaroon/Pods-Macaroon.release.xcconfig"; sourceTree = "<group>"; };
 		DDD9E9F2D1995F47F556657F /* Pods_Macaroon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Macaroon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -110,68 +60,9 @@
 			children = (
 				9613DBB01BD56847006A2132 /* NotificationRouter.swift */,
 				9613DBB21BD56A6A006A2132 /* NotificationSettings.swift */,
+				96EEBA311BD95781003DF30C /* Notification.swift */,
 			);
 			path = Notification;
-			sourceTree = "<group>";
-		};
-		966533341BC83A8300D6305C /* sodium */ = {
-			isa = PBXGroup;
-			children = (
-				966533351BC83A8300D6305C /* core.h */,
-				966533361BC83A8300D6305C /* crypto_aead_chacha20poly1305.h */,
-				966533371BC83A8300D6305C /* crypto_auth.h */,
-				966533381BC83A8300D6305C /* crypto_auth_hmacsha256.h */,
-				966533391BC83A8300D6305C /* crypto_auth_hmacsha512.h */,
-				9665333A1BC83A8300D6305C /* crypto_auth_hmacsha512256.h */,
-				9665333B1BC83A8300D6305C /* crypto_box.h */,
-				9665333C1BC83A8300D6305C /* crypto_box_curve25519xsalsa20poly1305.h */,
-				9665333D1BC83A8300D6305C /* crypto_core_hsalsa20.h */,
-				9665333E1BC83A8300D6305C /* crypto_core_salsa20.h */,
-				9665333F1BC83A8300D6305C /* crypto_core_salsa2012.h */,
-				966533401BC83A8300D6305C /* crypto_core_salsa208.h */,
-				966533411BC83A8300D6305C /* crypto_generichash.h */,
-				966533421BC83A8300D6305C /* crypto_generichash_blake2b.h */,
-				966533431BC83A8300D6305C /* crypto_hash.h */,
-				966533441BC83A8300D6305C /* crypto_hash_sha256.h */,
-				966533451BC83A8300D6305C /* crypto_hash_sha512.h */,
-				966533461BC83A8300D6305C /* crypto_int32.h */,
-				966533471BC83A8300D6305C /* crypto_int64.h */,
-				966533481BC83A8300D6305C /* crypto_onetimeauth.h */,
-				966533491BC83A8300D6305C /* crypto_onetimeauth_poly1305.h */,
-				9665334A1BC83A8300D6305C /* crypto_pwhash_scryptsalsa208sha256.h */,
-				9665334B1BC83A8300D6305C /* crypto_scalarmult.h */,
-				9665334C1BC83A8300D6305C /* crypto_scalarmult_curve25519.h */,
-				9665334D1BC83A8300D6305C /* crypto_secretbox.h */,
-				9665334E1BC83A8300D6305C /* crypto_secretbox_xsalsa20poly1305.h */,
-				9665334F1BC83A8300D6305C /* crypto_shorthash.h */,
-				966533501BC83A8300D6305C /* crypto_shorthash_siphash24.h */,
-				966533511BC83A8300D6305C /* crypto_sign.h */,
-				966533521BC83A8300D6305C /* crypto_sign_ed25519.h */,
-				966533531BC83A8300D6305C /* crypto_sign_edwards25519sha512batch.h */,
-				966533541BC83A8300D6305C /* crypto_stream.h */,
-				966533551BC83A8300D6305C /* crypto_stream_aes128ctr.h */,
-				966533561BC83A8300D6305C /* crypto_stream_chacha20.h */,
-				966533571BC83A8300D6305C /* crypto_stream_salsa20.h */,
-				966533581BC83A8300D6305C /* crypto_stream_salsa2012.h */,
-				966533591BC83A8300D6305C /* crypto_stream_salsa208.h */,
-				9665335A1BC83A8300D6305C /* crypto_stream_xsalsa20.h */,
-				9665335B1BC83A8300D6305C /* crypto_uint16.h */,
-				9665335C1BC83A8300D6305C /* crypto_uint32.h */,
-				9665335D1BC83A8300D6305C /* crypto_uint64.h */,
-				9665335E1BC83A8300D6305C /* crypto_uint8.h */,
-				9665335F1BC83A8300D6305C /* crypto_verify_16.h */,
-				966533601BC83A8300D6305C /* crypto_verify_32.h */,
-				966533611BC83A8300D6305C /* crypto_verify_64.h */,
-				966533621BC83A8300D6305C /* export.h */,
-				966533631BC83A8300D6305C /* randombytes.h */,
-				966533641BC83A8300D6305C /* randombytes_salsa20_random.h */,
-				966533651BC83A8300D6305C /* randombytes_sysrandom.h */,
-				966533661BC83A8300D6305C /* runtime.h */,
-				966533671BC83A8300D6305C /* utils.h */,
-				966533681BC83A8300D6305C /* version.h */,
-			);
-			name = sodium;
-			path = ../../../../usr/local/Cellar/libsodium/1.0.3/include/sodium;
 			sourceTree = "<group>";
 		};
 		96A9485E1BC6D8E30022D22E = {
@@ -255,7 +146,6 @@
 		D599EEFAD2A5C7FE3B4C0670 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				966533341BC83A8300D6305C /* sodium */,
 				DDD9E9F2D1995F47F556657F /* Pods_Macaroon.framework */,
 			);
 			name = Frameworks;
@@ -412,6 +302,7 @@
 				96A9486D1BC6D8E30022D22E /* ViewController.swift in Sources */,
 				9613DBB31BD56A6A006A2132 /* NotificationSettings.swift in Sources */,
 				96476F751BC6FA50005E0E4E /* PermissionViewController.swift in Sources */,
+				96EEBA321BD95781003DF30C /* Notification.swift in Sources */,
 				9613DBB11BD56847006A2132 /* NotificationRouter.swift in Sources */,
 				96476F771BC6FAF1005E0E4E /* MainNavigationController.swift in Sources */,
 				96A9486B1BC6D8E30022D22E /* AppDelegate.swift in Sources */,

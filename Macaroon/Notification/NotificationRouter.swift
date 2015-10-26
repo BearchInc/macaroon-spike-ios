@@ -1,7 +1,10 @@
 import UIKit
+import Alamofire
 
 class NotificationRouter {
 
+    static var request: Request!
+    
 	static func handleNotification(application: UIApplication, userInfo: [NSObject : AnyObject], completionHandler: (UIBackgroundFetchResult) -> Void) {
 		
 		print("didReceiveRemoteNotification with fetch")
@@ -28,15 +31,25 @@ class NotificationRouter {
 	
 	static func handleNotification(application: UIApplication, userInfo: [NSObject : AnyObject], identifier: String, completionHandler: () -> Void) {
 		
+		let notification = Notification(dictionary: userInfo)
+		var url = ""
 		switch identifier {
 		case NotificationSettings.ACCEPT_ACTION_ID:
 			print("Authorize was selected")
+            url = notification.approveUrl
 		case NotificationSettings.DECLINE_ACTION_ID:
-			print("Decline was selected")
+			url = notification.rejectUrl
 		default:
 			print("Where da fuck did you click???")
 		}
 		
-		completionHandler()
+		request = Alamofire.request(.GET, url)
+			.responseJSON { response in
+				print("omg")
+				debugPrint(response)
+				completionHandler()
+		}
+		debugPrint(request)
+		print(userInfo)
 	}
 }
