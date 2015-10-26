@@ -1,5 +1,6 @@
 import UIKit
 import Alamofire
+import ObjectMapper
 
 class NotificationRouter {
 
@@ -30,15 +31,15 @@ class NotificationRouter {
 	}
 	
 	static func handleNotification(application: UIApplication, userInfo: [NSObject : AnyObject], identifier: String, completionHandler: () -> Void) {
-		
-		let notification = Notification(dictionary: userInfo)
+        
+		let notification = Mapper<Notification>().map(userInfo)
 		var url = ""
 		switch identifier {
 		case NotificationSettings.ACCEPT_ACTION_ID:
 			print("Authorize was selected")
-            url = notification.approveUrl
+//            url = notification
 		case NotificationSettings.DECLINE_ACTION_ID:
-			url = notification.rejectUrl
+			url = notification!.rejectUrl!
 		default:
 			print("Where da fuck did you click???")
 		}
