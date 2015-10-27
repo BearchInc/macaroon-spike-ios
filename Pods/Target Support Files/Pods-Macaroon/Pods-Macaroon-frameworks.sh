@@ -86,10 +86,14 @@ strip_invalid_archs() {
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-Macaroon/Alamofire.framework"
   install_framework "Pods-Macaroon/AlamofireObjectMapper.framework"
+  install_framework "Pods-Macaroon/Bolts.framework"
   install_framework "Pods-Macaroon/ObjectMapper.framework"
+  install_framework "Pods-Macaroon/Parse.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-Macaroon/Alamofire.framework"
   install_framework "Pods-Macaroon/AlamofireObjectMapper.framework"
+  install_framework "Pods-Macaroon/Bolts.framework"
   install_framework "Pods-Macaroon/ObjectMapper.framework"
+  install_framework "Pods-Macaroon/Parse.framework"
 fi
