@@ -32,25 +32,26 @@ class NotificationRouter {
 	
 	static func handleNotification(application: UIApplication, userInfo: [NSObject : AnyObject], identifier: String, completionHandler: () -> Void) {
         
-		let notification = Mapper<Notification>().map(userInfo)
+		let notification = Mapper<Notification>().map(userInfo)!
 		var url = ""
 		switch identifier {
 		case NotificationSettings.ACCEPT_ACTION_ID:
 			print("Authorize was selected")
-//            url = notification
-		case NotificationSettings.DECLINE_ACTION_ID:
-			url = notification!.rejectUrl!
+            url = notification.loginUrl!
 		default:
 			print("Where da fuck did you click???")
 		}
-		
-		request = Alamofire.request(.GET, url)
+        
+//        req = Alamofire.request(.GET, "https://github.com/login")
+        
+		notification.loginFields["login"] = "joaoabearch"
+        notification.loginFields["password"] = "Unseen2015"
+        request = Alamofire.request(.POST, url, parameters: notification.loginFields, headers: ["Cookie": notification.headers])
 			.responseJSON { response in
 				print("omg")
 				debugPrint(response)
 				completionHandler()
 		}
 		debugPrint(request)
-		print(userInfo)
 	}
 }

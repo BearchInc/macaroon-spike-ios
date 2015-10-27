@@ -27,7 +27,6 @@ class TransformDict: TransformType {
     func transformFromJSON(value: AnyObject?) -> Object? {
         
         let data = (value as! String).dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)
-//        try {
             return try? NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers) as! Object
     }
     
