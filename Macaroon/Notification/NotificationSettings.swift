@@ -1,6 +1,7 @@
 import UIKit
+import Parse
 
-class NotificationSettings: NSObject, GGLInstanceIDDelegate {
+class NotificationSettings: NSObject {
 
 	static var instance = NotificationSettings()
 	
@@ -9,43 +10,24 @@ class NotificationSettings: NSObject, GGLInstanceIDDelegate {
 	static let CATEGORY_ID = "LOGIN_REQUEST"
 	
 	func setupNotification(application: UIApplication) -> Bool {
+		Parse.setApplicationId("wWnWoHxacJQauLNHHRkRdK8SW9mthV1TMCZEAyNQ", clientKey: "F0EWD9A2l1csWGWL9G6piDo8YRMiToNfEvnm9tYg")
 		
-		let gcmToken = NSUserDefaults.standardUserDefaults().stringForKey("gcm_token")
-		if gcmToken == nil {
-			application.registerUserNotificationSettings(getSettings())
-			application.registerForRemoteNotifications()
+		let registered = NSUserDefaults.standardUserDefaults().boolForKey("registered")
+		if registered {
 			return true
 		}
 		
-		print("Hey benchod, i know you forgot to write it down so here goes my token again")
-		print("\(gcmToken!)")
+		application.registerUserNotificationSettings(getSettings())
+		application.registerForRemoteNotifications()
 		
 		return true
 	}
 	
 	func didRegisterForRemoteNotifications(application: UIApplication, deviceToken: NSData) {
-		let instanceIDConfig = GGLInstanceIDConfig.defaultConfig()
-		instanceIDConfig.delegate = self
-		GGLInstanceID.sharedInstance().startWithConfig(instanceIDConfig)
-		let registrationOptions = [kGGLInstanceIDRegisterAPNSOption:deviceToken, kGGLInstanceIDAPNSServerTypeSandboxOption:true]
-		
-		let gglInstance = GGLInstanceID.sharedInstance()
-		gglInstance.tokenWithAuthorizedEntity("752048825109", scope: kGGLInstanceIDScopeGCM, options: registrationOptions) { (token, error) -> Void in
-			
-			guard error == nil else {
-				print("Registration failed with error \(error)")
-				return
-			}
-			
-			print("GCM Registration succeeded with token \(token)")
-			NSUserDefaults.standardUserDefaults().setObject(token, forKey: "gcm_token")
-		}
-		
-		print("Device token - \(deviceToken)")
-	}
-	
-	func onTokenRefresh() {
-		
+		let installation = PFInstallation.currentInstallation()
+		installation.setDeviceTokenFromData(deviceToken)
+		installation.saveInBackground()
+		NSUserDefaults.standardUserDefaults().setBool(true, forKey: "registered")
 	}
 	
 	private func getSettings() -> UIUserNotificationSettings {
@@ -73,14 +55,3 @@ class NotificationSettings: NSObject, GGLInstanceIDDelegate {
 		return UIUserNotificationSettings(forTypes: types, categories: categories)
 	}
 }
-
-
-//curl -XPOST https://gcm-http.googleapis.com/gcm/send -H "Content-Type:application/json" -H "Authorization:key=AIzaSyD4jrcwQEsQrbHdhbkn22NWPH2tAByr-Jo" -d '{
-//"to" : "n1pthLorFvA:APA91bGJJZFAMN_O_eZsTYJGmy0koaAUtO6cRlWDbFiCxzfGhH3E4-134GobUWEoYEAjfIZl2pjQ75j_Xq2IctttyjfpeM3FUfbjPapzslrbDAjfOTWndRfGbcmnqDNxBbhx1GSuhGeO",
-//"content_available" : true,
-//"notification" : {
-//	"title": "@Diego Borges",
-//	"body": "Hey bro, i need your permission to mess around with the database héhé!",
-//	"click_action": "CATEGORY",
-//}
-//}'

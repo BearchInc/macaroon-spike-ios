@@ -8,18 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		263D83201EC57491B2386303 /* Pods_Macaroon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDD9E9F2D1995F47F556657F /* Pods_Macaroon.framework */; };
-		9613DBB11BD56847006A2132 /* NotificationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9613DBB01BD56847006A2132 /* NotificationRouter.swift */; settings = {ASSET_TAGS = (); }; };
-		9613DBB31BD56A6A006A2132 /* NotificationSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9613DBB21BD56A6A006A2132 /* NotificationSettings.swift */; settings = {ASSET_TAGS = (); }; };
-		96476F751BC6FA50005E0E4E /* PermissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96476F741BC6FA50005E0E4E /* PermissionViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		96476F771BC6FAF1005E0E4E /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96476F761BC6FAF1005E0E4E /* MainNavigationController.swift */; settings = {ASSET_TAGS = (); }; };
-		96476F7F1BC70BF1005E0E4E /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96476F7E1BC70BF1005E0E4E /* Storyboards.swift */; settings = {ASSET_TAGS = (); }; };
+		9613DBB11BD56847006A2132 /* NotificationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9613DBB01BD56847006A2132 /* NotificationRouter.swift */; };
+		9613DBB31BD56A6A006A2132 /* NotificationSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9613DBB21BD56A6A006A2132 /* NotificationSettings.swift */; };
+		96476F751BC6FA50005E0E4E /* PermissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96476F741BC6FA50005E0E4E /* PermissionViewController.swift */; };
+		96476F771BC6FAF1005E0E4E /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96476F761BC6FAF1005E0E4E /* MainNavigationController.swift */; };
+		96476F7F1BC70BF1005E0E4E /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96476F7E1BC70BF1005E0E4E /* Storyboards.swift */; };
 		96A9486B1BC6D8E30022D22E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A9486A1BC6D8E30022D22E /* AppDelegate.swift */; };
 		96A9486D1BC6D8E30022D22E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A9486C1BC6D8E30022D22E /* ViewController.swift */; };
 		96A948701BC6D8E30022D22E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96A9486E1BC6D8E30022D22E /* Main.storyboard */; };
 		96A948721BC6D8E30022D22E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96A948711BC6D8E30022D22E /* Assets.xcassets */; };
 		96A948751BC6D8E30022D22E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96A948731BC6D8E30022D22E /* LaunchScreen.storyboard */; };
-		96A948811BC6DE990022D22E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 96A948801BC6DE990022D22E /* GoogleService-Info.plist */; settings = {ASSET_TAGS = (); }; };
-		96EEBA321BD95781003DF30C /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EEBA311BD95781003DF30C /* Notification.swift */; settings = {ASSET_TAGS = (); }; };
+		96A948811BC6DE990022D22E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 96A948801BC6DE990022D22E /* GoogleService-Info.plist */; };
+		96EEBA321BD95781003DF30C /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EEBA311BD95781003DF30C /* Notification.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -182,7 +182,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = bearch;
 				TargetAttributes = {
 					96A948661BC6D8E30022D22E = {
@@ -420,7 +420,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4F2D172D10622DCD788EE384 /* Pods-Macaroon.debug.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -453,7 +452,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B69CB0F34D99C2B85658565D /* Pods-Macaroon.release.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";

@@ -1,11 +1,18 @@
 import UIKit
 import Alamofire
+import ObjectMapper
+import Parse
 
 class NotificationRouter {
 
     static var request: Request!
     
 	static func handleNotification(application: UIApplication, userInfo: [NSObject : AnyObject], completionHandler: (UIBackgroundFetchResult) -> Void) {
+		
+		PFPush.handlePush(userInfo)
+		if application.applicationState == UIApplicationState.Inactive {
+			PFAnalytics.trackAppOpenedWithRemoteNotificationPayload(userInfo)
+		}
 		
 		print("didReceiveRemoteNotification with fetch")
 		print("\(userInfo)")
@@ -30,26 +37,25 @@ class NotificationRouter {
 	}
 	
 	static func handleNotification(application: UIApplication, userInfo: [NSObject : AnyObject], identifier: String, completionHandler: () -> Void) {
-		
-		let notification = Notification(dictionary: userInfo)
+        
+		let notification = Mapper<Notification>().map(userInfo["aps"])!
 		var url = ""
 		switch identifier {
 		case NotificationSettings.ACCEPT_ACTION_ID:
 			print("Authorize was selected")
-            url = notification.approveUrl
+            url = notification.loginUrl!
 		case NotificationSettings.DECLINE_ACTION_ID:
-			url = notification.rejectUrl
+			print("Reject was selected")
+			url = notification.rejectUrl!
 		default:
 			print("Where da fuck did you click???")
 		}
 		
 		request = Alamofire.request(.GET, url)
 			.responseJSON { response in
-				print("omg")
 				debugPrint(response)
 				completionHandler()
 		}
 		debugPrint(request)
-		print(userInfo)
 	}
 }
