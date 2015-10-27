@@ -16,7 +16,7 @@ class Notification : Mappable {
 		loginUrl <- map["login_url"]
 		rejectUrl <- map["reject_url"]
         headers <- map["headers"]
-        loginFields <- (map["login_fields"], TransformDict())
+//        loginFields <- (map["login_fields"], TransformDict())
 	}
 }
 

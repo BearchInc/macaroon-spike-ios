@@ -4,7 +4,6 @@
 use_frameworks!
 
 target 'Macaroon' do
-	pod 'Google/CloudMessaging'
     pod 'AlamofireObjectMapper', '1.1.0'
 	pod 'Parse', '1.9.1'
 end
