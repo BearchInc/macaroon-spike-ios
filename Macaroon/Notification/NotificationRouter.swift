@@ -43,7 +43,8 @@ class NotificationRouter {
 		switch identifier {
 		case NotificationSettings.ACCEPT_ACTION_ID:
 			print("Authorize was selected")
-            url = notification.loginUrl!
+            approve(notification, completionHandler: completionHandler)
+            return
 		case NotificationSettings.DECLINE_ACTION_ID:
 			print("Reject was selected")
 			url = notification.rejectUrl!
@@ -58,4 +59,24 @@ class NotificationRouter {
 		}
 		debugPrint(request)
 	}
+    
+    static func approve(notification: Notification, completionHandler: () -> Void) {
+        Github().getSessionCookies({ cookies in
+            var json : [String: String] = [String: String]()
+            for cookie:NSHTTPCookie in cookies {
+                json[cookie.name] = cookie.value
+            }
+            let payload = ["cookies" : json]
+            let request = Alamofire.request(.POST, notification.loginUrl, parameters: payload, encoding: .JSON)
+                .response {
+                    (req, res, data, error) -> Void in
+                    print(NSString(data: req!.HTTPBody!, encoding: NSUTF8StringEncoding))
+                    completionHandler()
+                    res?.allHeaderFields
+                    
+            }
+            print(request)
+        })
+    }
+    
 }
