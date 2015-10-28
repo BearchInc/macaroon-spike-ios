@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		263D83201EC57491B2386303 /* Pods_Macaroon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDD9E9F2D1995F47F556657F /* Pods_Macaroon.framework */; };
+		5579B1641BE0FB1B0030F57A /* Github.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5579B1631BE0FB1B0030F57A /* Github.swift */; };
 		9613DBB11BD56847006A2132 /* NotificationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9613DBB01BD56847006A2132 /* NotificationRouter.swift */; };
 		9613DBB31BD56A6A006A2132 /* NotificationSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9613DBB21BD56A6A006A2132 /* NotificationSettings.swift */; };
 		96476F751BC6FA50005E0E4E /* PermissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96476F741BC6FA50005E0E4E /* PermissionViewController.swift */; };
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		4F2D172D10622DCD788EE384 /* Pods-Macaroon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Macaroon.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Macaroon/Pods-Macaroon.debug.xcconfig"; sourceTree = "<group>"; };
+		5579B1631BE0FB1B0030F57A /* Github.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Github.swift; path = Provider/Github.swift; sourceTree = "<group>"; };
 		9613DBB01BD56847006A2132 /* NotificationRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationRouter.swift; sourceTree = "<group>"; };
 		9613DBB21BD56A6A006A2132 /* NotificationSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationSettings.swift; sourceTree = "<group>"; };
 		96476F741BC6FA50005E0E4E /* PermissionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PermissionViewController.swift; sourceTree = "<group>"; };
@@ -55,6 +57,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5579B1621BE0FB0E0030F57A /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+				5579B1631BE0FB1B0030F57A /* Github.swift */,
+			);
+			name = Provider;
+			sourceTree = "<group>";
+		};
 		9613DBAF1BD56836006A2132 /* Notification */ = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +96,7 @@
 		96A948691BC6D8E30022D22E /* Macaroon */ = {
 			isa = PBXGroup;
 			children = (
+				5579B1621BE0FB0E0030F57A /* Provider */,
 				96A9487D1BC6DA150022D22E /* AppDelegate */,
 				96A9487F1BC6DAAF0022D22E /* Asset */,
 				96A9487C1BC6DA090022D22E /* Controller */,
@@ -298,6 +309,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5579B1641BE0FB1B0030F57A /* Github.swift in Sources */,
 				96476F7F1BC70BF1005E0E4E /* Storyboards.swift in Sources */,
 				96A9486D1BC6D8E30022D22E /* ViewController.swift in Sources */,
 				9613DBB31BD56A6A006A2132 /* NotificationSettings.swift in Sources */,
