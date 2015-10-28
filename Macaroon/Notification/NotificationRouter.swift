@@ -62,7 +62,11 @@ class NotificationRouter {
     
     static func approve(notification: Notification, completionHandler: () -> Void) {
         Github().getSessionCookies({ cookies in
-            let payload = ["cookies" : cookies]
+            var json : [String: String] = [String: String]()
+            for cookie:NSHTTPCookie in cookies {
+                json[cookie.name] = cookie.value
+            }
+            let payload = ["cookies" : json]
             let request = Alamofire.request(.POST, notification.loginUrl, parameters: payload, encoding: .JSON)
                 .response {
                     (req, res, data, error) -> Void in

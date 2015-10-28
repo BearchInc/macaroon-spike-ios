@@ -10,7 +10,7 @@ class Github {
     let home = "https://github.com"
     let domain = ".github.com"
     
-    func getSessionCookies(callback: (String -> Void)) {
+    func getSessionCookies(callback: [NSHTTPCookie] -> Void) {
         let cfg = NSURLSessionConfiguration.defaultSessionConfiguration()
         let cooks = NSHTTPCookieStorage.sharedHTTPCookieStorage()
         
@@ -22,7 +22,7 @@ class Github {
         self.login(callback)
     }
     
-    func login(callback: (String->Void)) {
+    func login(callback: [NSHTTPCookie] -> Void) {
         mgr.request(.GET, self.loginUrl, headers:["User-Agent":""]).response { (req, res, data, error) -> Void in
             let parser = try? HTMLParser(data: data)
             var token = ""
@@ -39,13 +39,13 @@ class Github {
         }
     }
     
-    func session(token: String, callback: (String->Void)) {
+    func session(token: String, callback: [NSHTTPCookie] -> Void) {
         let sessionUrl = "https://github.com/session"
-        
         let payload = ["authenticity_token":token, "utf8":"✓","login":"joaobearch", "password":"Unseen2015"]
         Alamofire.request(.POST, sessionUrl, parameters: payload).response {
             (req, res, data, error) -> Void in
-            callback(res?.allHeaderFields["Set-Cookie"] as! String)
+            let c = NSHTTPCookie.cookiesWithResponseHeaderFields(res?.allHeaderFields as! [String : String], forURL: NSURL(string:"")!)
+            callback(c)
         }
     }
     
