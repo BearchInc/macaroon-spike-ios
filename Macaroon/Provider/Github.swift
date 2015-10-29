@@ -11,13 +11,13 @@ class Github {
     let domain = ".github.com"
     
     func getSessionCookies(callback: [NSHTTPCookie] -> Void) {
-        let cfg = NSURLSessionConfiguration.defaultSessionConfiguration()
-        let cooks = NSHTTPCookieStorage.sharedHTTPCookieStorage()
+        let configuration = NSURLSessionConfiguration.defaultSessionConfiguration()
+        let cookieJar = NSHTTPCookieStorage.sharedHTTPCookieStorage()
         
         // makes no difference whether it's set or left at default
-        cfg.HTTPCookieStorage = cooks
-        cfg.HTTPCookieAcceptPolicy = NSHTTPCookieAcceptPolicy.Always
-        mgr = Alamofire.Manager(configuration: cfg)
+        configuration.HTTPCookieStorage = cookieJar
+        configuration.HTTPCookieAcceptPolicy = NSHTTPCookieAcceptPolicy.Always
+        mgr = Alamofire.Manager(configuration: configuration)
         
         self.login(callback)
     }
@@ -32,7 +32,6 @@ class Github {
                 if node.getAttributeNamed("name") == "authenticity_token" {
                     token = node.getAttributeNamed("value")
                     print("Token: \(token)")
-                    print("\n")
                 }
             }
             self.session(token, callback: callback)
@@ -44,8 +43,8 @@ class Github {
         let payload = ["authenticity_token":token, "utf8":"✓","login":"joaobearch", "password":"Unseen2015"]
         Alamofire.request(.POST, sessionUrl, parameters: payload).response {
             (req, res, data, error) -> Void in
-            let c = NSHTTPCookie.cookiesWithResponseHeaderFields(res?.allHeaderFields as! [String : String], forURL: NSURL(string:"")!)
-            callback(c)
+            let cookieArray = NSHTTPCookie.cookiesWithResponseHeaderFields(res?.allHeaderFields as! [String : String], forURL: NSURL(string:"")!)
+            callback(cookieArray)
         }
     }
     
