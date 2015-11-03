@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		263D83201EC57491B2386303 /* Pods_Macaroon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDD9E9F2D1995F47F556657F /* Pods_Macaroon.framework */; };
 		5579B1641BE0FB1B0030F57A /* Github.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5579B1631BE0FB1B0030F57A /* Github.swift */; };
+		557B64A11BEA35E800C52AF0 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557B649F1BEA35E800C52AF0 /* NetworkManager.swift */; };
+		557B64A21BEA35E800C52AF0 /* Twitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557B64A01BEA35E800C52AF0 /* Twitter.swift */; };
 		9613DBB11BD56847006A2132 /* NotificationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9613DBB01BD56847006A2132 /* NotificationRouter.swift */; };
 		9613DBB31BD56A6A006A2132 /* NotificationSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9613DBB21BD56A6A006A2132 /* NotificationSettings.swift */; };
 		96476F751BC6FA50005E0E4E /* PermissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96476F741BC6FA50005E0E4E /* PermissionViewController.swift */; };
@@ -26,6 +28,8 @@
 /* Begin PBXFileReference section */
 		4F2D172D10622DCD788EE384 /* Pods-Macaroon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Macaroon.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Macaroon/Pods-Macaroon.debug.xcconfig"; sourceTree = "<group>"; };
 		5579B1631BE0FB1B0030F57A /* Github.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Github.swift; path = Provider/Github.swift; sourceTree = "<group>"; };
+		557B649F1BEA35E800C52AF0 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkManager.swift; path = Provider/NetworkManager.swift; sourceTree = "<group>"; };
+		557B64A01BEA35E800C52AF0 /* Twitter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Twitter.swift; path = Provider/Twitter.swift; sourceTree = "<group>"; };
 		9613DBB01BD56847006A2132 /* NotificationRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationRouter.swift; sourceTree = "<group>"; };
 		9613DBB21BD56A6A006A2132 /* NotificationSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationSettings.swift; sourceTree = "<group>"; };
 		96476F741BC6FA50005E0E4E /* PermissionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PermissionViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +64,8 @@
 		5579B1621BE0FB0E0030F57A /* Provider */ = {
 			isa = PBXGroup;
 			children = (
+				557B649F1BEA35E800C52AF0 /* NetworkManager.swift */,
+				557B64A01BEA35E800C52AF0 /* Twitter.swift */,
 				5579B1631BE0FB1B0030F57A /* Github.swift */,
 			);
 			name = Provider;
@@ -309,6 +315,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				557B64A11BEA35E800C52AF0 /* NetworkManager.swift in Sources */,
 				5579B1641BE0FB1B0030F57A /* Github.swift in Sources */,
 				96476F7F1BC70BF1005E0E4E /* Storyboards.swift in Sources */,
 				96A9486D1BC6D8E30022D22E /* ViewController.swift in Sources */,
@@ -316,6 +323,7 @@
 				96476F751BC6FA50005E0E4E /* PermissionViewController.swift in Sources */,
 				96EEBA321BD95781003DF30C /* Notification.swift in Sources */,
 				9613DBB11BD56847006A2132 /* NotificationRouter.swift in Sources */,
+				557B64A21BEA35E800C52AF0 /* Twitter.swift in Sources */,
 				96476F771BC6FAF1005E0E4E /* MainNavigationController.swift in Sources */,
 				96A9486B1BC6D8E30022D22E /* AppDelegate.swift in Sources */,
 			);

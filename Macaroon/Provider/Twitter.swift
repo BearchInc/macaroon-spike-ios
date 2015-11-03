@@ -2,20 +2,19 @@ import Foundation
 import Alamofire
 import BRYHTMLParser
 
-class Github {
-    
+class Twitter {
     var manager: Alamofire.Manager = NetworkManager().manager!
-    let loginUrl = "https://github.com/login"
-    let sessionUrl = "https://github.com/session"
-    let home = "https://github.com"
-    let domain = ".github.com"
+    let loginUrl = "https://twitter.com/login"
+    let sessionUrl = "https://twitter.com/sessions"
+    let home = "https://twitter.com"
+    let domain = ".twitter.com"
     
     func getSessionCookies(callback: [NSHTTPCookie] -> Void) {
         self.login(callback)
     }
     
     func login(callback: [NSHTTPCookie] -> Void) {
-        manager.request(.GET, self.loginUrl, headers:["User-Agent":""]).response { (req, res, data, error) -> Void in
+        manager.request(.GET, self.loginUrl, headers:["User-Agent":"curl/7.43.0"]).response { (req, res, data, error) -> Void in
             let parser = try? HTMLParser(data: data)
             var token = ""
             let body = parser?.body
@@ -24,6 +23,9 @@ class Github {
                 if node.getAttributeNamed("name") == "authenticity_token" {
                     token = node.getAttributeNamed("value")
                     print("Token: \(token)")
+                    break;
+                } else {
+                    continue;
                 }
             }
             self.session(token, callback: callback)
@@ -31,11 +33,11 @@ class Github {
     }
     
     func session(token: String, callback: [NSHTTPCookie] -> Void) {
-        let sessionUrl = "https://github.com/session"
-        let payload = ["authenticity_token":token, "utf8":"✓","login":"joaobearch", "password":"Unseen2015"]
-        manager.request(.POST, sessionUrl, parameters: payload).response {
-            (req, res, data, error) -> Void in
-            callback(self.manager.session.configuration.HTTPCookieStorage!.cookies!)
+        let payload = ["authenticity_token":token, "session[username_or_email]":"not_lisardo", "session[password]":"1lisa3do"]
+        print(sessionUrl)
+        manager.request(.POST, self.sessionUrl, headers:["User-Agent":"curl/7.43.0"], parameters: payload).response { (req, res, data, error) -> Void in
+            let cookieArray = self.manager.session.configuration.HTTPCookieStorage!.cookies!
+            callback(cookieArray)
             self.manager.session.invalidateAndCancel()
         }
     }

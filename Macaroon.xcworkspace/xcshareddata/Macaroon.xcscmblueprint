@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "3DD46C5CB4F53B9E7FDA516D6B01B1720E56B7D5",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "3DD46C5CB4F53B9E7FDA516D6B01B1720E56B7D5" : 0,
+    "26012EAD0982AF8D01C4E3008522476E22924948" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "47EC6936-464B-477A-8FBD-42669D24A219",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "3DD46C5CB4F53B9E7FDA516D6B01B1720E56B7D5" : "macaroon-spike-ios",
+    "26012EAD0982AF8D01C4E3008522476E22924948" : "hobo-ios\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Macaroon",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Macaroon.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/bearchinc\/hobo-ios",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "26012EAD0982AF8D01C4E3008522476E22924948"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "http:\/\/github.com\/bearchinc\/macaroon-spike-ios",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "3DD46C5CB4F53B9E7FDA516D6B01B1720E56B7D5"
+    }
+  ]
+}
