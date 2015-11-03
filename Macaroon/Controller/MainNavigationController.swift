@@ -8,6 +8,16 @@ class MainNavigationController: UINavigationController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		NSNotificationCenter.defaultCenter().addObserver(self, selector: "handlePermissionRequest:", name: "PERMISSION_REQUEST_NOTIFICATION", object: nil)
+        Github().getSessionCookies { (cookieArray:[NSHTTPCookie]) -> Void in
+            
+            for c in cookieArray {
+                if c.name == "twid" {
+                    print("Success!")
+                }
+            }
+            
+            print(cookieArray)
+        }
 	}
 	
 	func handlePermissionRequest(notification: NSNotification) {
